@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <DocumentationFile>$(ProjectDir)$(OutDir)$(MSBuildProjectName).xml</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
     <RestoreSources>$(RestoreSources);../../packages;https://api.nuget.org/v3/index.json</RestoreSources>
   </PropertyGroup>
 
@@ -20,19 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="BlazorWebView" Version="0.2.0-preview1" />
     <PackageReference Include="BlazorWebView.Wpf" Version="0.2.0-preview1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VanderStack.WebAssemblyClient\VanderStack.WebAssemblyClient.csproj" />
     <ProjectReference Include="..\VanderStack.Shared\VanderStack.Shared.csproj" />
   </ItemGroup>
 

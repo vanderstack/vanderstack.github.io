@@ -19,7 +19,6 @@ namespace VanderStack.WpfClientHost
     using System;
     using System.Windows;
     using BlazorWebView;
-    using VanderStack.WebAssemblyClient;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml.
@@ -55,7 +54,7 @@ namespace VanderStack.WpfClientHost
             if (!this.initialized)
             {
                 this.initialized = true;
-                this.run = BlazorWebViewHost.Run<Program>(this.BlazorWebView, "wwwroot/index.html");
+                this.run = BlazorWebViewHost.Run<Startup>(this.BlazorWebView, "wwwroot/index.html");
             }
         }
     }

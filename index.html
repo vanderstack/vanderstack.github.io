@@ -1,13 +1,16 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VanderStack</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>VanderStack.WebAssemblyClient</title>
     <base href="/" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link href="css/site.css" rel="stylesheet" />
+    <link href="_content/VanderStack.Shared/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="_content/VanderStack.Shared/css/site.css" rel="stylesheet" />
+    <link href="_content/VanderStack.Shared/manifest.json" rel="manifest" />
 </head>
+
 <body>
     <app>Loading...</app>
 
@@ -24,10 +27,10 @@
         // When the single page app is loaded further down in this file,
         // the correct url will be waiting in the browser's history for
         // the single page app to route accordingly.
-        (function(l) {
+        (function (l) {
             if (l.search) {
                 var q = {};
-                l.search.slice(1).split('&').forEach(function(v) {
+                l.search.slice(1).split('&').forEach(function (v) {
                     var a = v.split('=');
                     q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
                 });
@@ -43,6 +46,13 @@
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
-    <script id="blazorMode" src="_framework/blazor.webassembly.js"></script>
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('_content/VanderStack.Shared/service-worker.js');</script>
 </body>
+
 </html>

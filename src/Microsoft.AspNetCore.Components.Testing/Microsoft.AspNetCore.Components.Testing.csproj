@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VanderStack.WebAssemblyClient\VanderStack.WebAssemblyClient.csproj" />
+    <ProjectReference Include="..\VanderStack.Shared\VanderStack.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,9 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VanderStack.WebAssemblyClient\VanderStack.WebAssemblyClient.csproj" />
-    <ProjectReference Include="..\VanderStack.Shared\VanderStack.Shared.csproj" />
     <ProjectReference Include="..\Microsoft.AspNetCore.Components.Testing\Microsoft.AspNetCore.Components.Testing.csproj" />
+    <ProjectReference Include="..\VanderStack.Shared\VanderStack.Shared.csproj" />
   </ItemGroup>
 
 </Project>

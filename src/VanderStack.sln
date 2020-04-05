@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.98
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.Shared", "VanderStack.Shared\VanderStack.Shared.csproj", "{705FE9DA-0F04-467B-A955-909481D2E96E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.WebAssemblyClient", "VanderStack.WebAssemblyClient\VanderStack.WebAssemblyClient.csproj", "{DEC6D9ED-8E1F-41EA-8211-E6046868DF45}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Components.Testing", "Microsoft.AspNetCore.Components.Testing\Microsoft.AspNetCore.Components.Testing.csproj", "{E7F4A27B-7809-4D3C-8A9D-088DBA3438B0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.Tests", "VanderStack.Tests\VanderStack.Tests.csproj", "{435527B9-F583-497F-BB9F-AF595DB37E0B}"
@@ -15,20 +11,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.WebServerClient
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.WpfClientHost", "VanderStack.WpfClientHost\VanderStack.WpfClientHost.csproj", "{12E92966-966F-4F4F-80EF-7536E95E4318}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.Shared", "VanderStack.Shared\VanderStack.Shared.csproj", "{67DFAFF6-A5D2-49E8-BB11-A82E7791AF9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.WebAssemblyClientHost", "VanderStack.WebAssemblyClientHost\VanderStack.WebAssemblyClientHost.csproj", "{FCE7B479-CE5E-4001-95A4-83F1F6D6D2BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{705FE9DA-0F04-467B-A955-909481D2E96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{705FE9DA-0F04-467B-A955-909481D2E96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{705FE9DA-0F04-467B-A955-909481D2E96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{705FE9DA-0F04-467B-A955-909481D2E96E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DEC6D9ED-8E1F-41EA-8211-E6046868DF45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEC6D9ED-8E1F-41EA-8211-E6046868DF45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEC6D9ED-8E1F-41EA-8211-E6046868DF45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEC6D9ED-8E1F-41EA-8211-E6046868DF45}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E7F4A27B-7809-4D3C-8A9D-088DBA3438B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E7F4A27B-7809-4D3C-8A9D-088DBA3438B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7F4A27B-7809-4D3C-8A9D-088DBA3438B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +37,14 @@ Global
 		{12E92966-966F-4F4F-80EF-7536E95E4318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12E92966-966F-4F4F-80EF-7536E95E4318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12E92966-966F-4F4F-80EF-7536E95E4318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67DFAFF6-A5D2-49E8-BB11-A82E7791AF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67DFAFF6-A5D2-49E8-BB11-A82E7791AF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67DFAFF6-A5D2-49E8-BB11-A82E7791AF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67DFAFF6-A5D2-49E8-BB11-A82E7791AF9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCE7B479-CE5E-4001-95A4-83F1F6D6D2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE7B479-CE5E-4001-95A4-83F1F6D6D2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE7B479-CE5E-4001-95A4-83F1F6D6D2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE7B479-CE5E-4001-95A4-83F1F6D6D2BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

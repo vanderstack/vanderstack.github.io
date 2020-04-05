@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components.Testing;
-using VanderStack.WebAssemblyClient.Pages;
+using VanderStack.Shared.Pages;
 using System;
 using Xunit;
 
