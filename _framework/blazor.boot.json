@@ -1,0 +1,37 @@
+{
+  "cacheBootResources": true,
+  "debugBuild": false,
+  "entryAssembly": "VanderStack.WebAssemblyClient",
+  "linkerEnabled": true,
+  "resources": {
+    "assembly": {
+      "Microsoft.AspNetCore.Components.dll": "sha256-jV+02tltO1eXRIVNkO8m2CUS9YrX9wsv29nlp4thhSU=",
+      "Microsoft.AspNetCore.Components.Web.dll": "sha256-3jhX\/hP2P\/ynffiDAXykbekpKB\/Gy7elAeI1bzfwVOI=",
+      "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-f0SinchLycvAqzRuug\/q3xxLu8WNFXVi+caOpcA0Ywo=",
+      "Microsoft.Bcl.AsyncInterfaces.dll": "sha256-jzHgXWAvWMkKIGFjZoT84tbe72E+H7CvTr\/Dryh4QPs=",
+      "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-WtHLXvIBCJEi8K+69BNX+stS92DveIIx0Y3eXVpBjuY=",
+      "Microsoft.Extensions.Configuration.dll": "sha256-OUMc2pgkAl8oe3r7RqsceGUEVaQI8VwX+euxsDPaZ\/g=",
+      "Microsoft.Extensions.DependencyInjection.Abstractions.dll": "sha256-GgU8bCH7iD7eR+qzAr82LUOTB+7nUoyRdlrZ65I196s=",
+      "Microsoft.Extensions.DependencyInjection.dll": "sha256-xfmo9Ya1rohCguLD6Sewbkxe9YR3pJBtvPJOoBEvO4g=",
+      "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-ELEv9W9GHY2ZYpTLs6D0jwKBH+W+n7MIOmE9uXUYL68=",
+      "Microsoft.Extensions.Primitives.dll": "sha256-bptbhdQuJqArd8q+ry4ikmEcDBZoPcuKKsb2+968epk=",
+      "Microsoft.JSInterop.dll": "sha256-CJ0jnf2G21cOvZYQt\/4NVkv642Xz8fLQyPnHvcfP3D4=",
+      "Microsoft.JSInterop.WebAssembly.dll": "sha256-VP8179q6KlTFT\/O0r6zq3Il8a0P7HOsHY2h35s5Lpng=",
+      "mscorlib.dll": "sha256-rtop+THauom7Ck0ZYRpazHKM9FgPOa3fhyAIGYZ3haA=",
+      "System.Core.dll": "sha256-bULwCYlwPAAIgSq8+5QaVUT3FxRdAkPsDo2LQCi1yuc=",
+      "System.dll": "sha256-ODkwGeEay8ZXfoyvV0\/ard6uqz66nNiiDHWDk03dKu4=",
+      "System.Net.Http.dll": "sha256-tlpltPBfYuOFhGMBc1t32F2ZJo0GTBD7ESm1nqX27P8=",
+      "System.Runtime.CompilerServices.Unsafe.dll": "sha256-\/bqAP5xYAKtscniejIVHfZGBqIWAi5qxc1z0oHkgLBg=",
+      "System.Text.Encodings.Web.dll": "sha256-HmJQvuktPCyLjul7VUWAgs\/sB9I8Z68G3p3Ov7JUAPA=",
+      "System.Text.Json.dll": "sha256-LoTUsDw16FmwE6lfAUDA00MWojHXNJF2idEVamzbiMQ=",
+      "VanderStack.Shared.dll": "sha256-Bs+7Zk9tflzCdpAwyZDp6kihwA5gSwPFGYmcCd+mhQM=",
+      "VanderStack.WebAssemblyClient.dll": "sha256-HOdQpN2rIQrhy2rVOLQSs\/gCiB2vEX75+v9S24v\/Uk4=",
+      "WebAssembly.Bindings.dll": "sha256-7ZgYNTFIlHvQZYPxrvHT8nPi1i+AHIyCNj5XqnXuMMU=",
+      "WebAssembly.Net.Http.dll": "sha256-GeCsysNxoFmbUwVVFmxcLVXTHNU2RF5uN6Da0bXFtH8="
+    },
+    "runtime": {
+      "dotnet.3.2.0-preview2.20159.2.js": "sha256-80Q7rIpqLxXzuMWqtC+FCBNrG15kR\/r+ba08n2TpQO0=",
+      "dotnet.wasm": "sha256-TwiabWTQ0R8CJeRzc59eU16DKfcf2p8PIvZsyWF7\/8M="
+    }
+  }
+}
