@@ -31,6 +31,7 @@ namespace VanderStack.WebServerClientHost
                 app.UseWebAssemblyDebugging();
             }
 
+            // Add static files to the request pipeline.
             app.UseStaticFiles();
 
             app.UseBlazorFrameworkFiles();
