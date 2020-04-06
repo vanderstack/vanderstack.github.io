@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>VanderStack.WebAssemblyClient</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VanderStack</title>
     <base href="/" />
     <link href="_content/VanderStack.Shared/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="_content/VanderStack.Shared/css/site.css" rel="stylesheet" />
@@ -52,7 +52,7 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
-    <script>navigator.serviceWorker.register('_content/VanderStack.Shared/service-worker.js');</script>
+    <script>navigator.serviceWorker.register('service-worker.js', { scope: '/' });</script>
 </body>
 
 </html>
