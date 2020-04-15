@@ -1,6 +1,7 @@
 ﻿using System.Net.Http;
 using Microsoft.Extensions.DependencyInjection;
 using BlazorWebView;
+using VanderStack.Shared.Infrastructure.Auth;
 
 namespace VanderStack.WpfClientHost
 {
@@ -9,6 +10,7 @@ namespace VanderStack.WpfClientHost
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<HttpClient>();
+            services.AddMsalAuthentication();
         }
 
         /// <summary>

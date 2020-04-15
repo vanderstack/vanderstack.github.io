@@ -5,12 +5,14 @@
     using Microsoft.Extensions.DependencyInjection;
     using System.Net.Http;
     using VanderStack.Shared;
+    using VanderStack.Shared.Infrastructure.Auth;
 
     public class Startup
     {
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<HttpClient>();
+            services.AddMsalAuthentication();
         }
 
         /// <summary>
