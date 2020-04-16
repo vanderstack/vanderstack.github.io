@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.Tests", "Vander
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.WebServerClientHost", "VanderStack.WebServerClientHost\VanderStack.WebServerClientHost.csproj", "{EE047FDF-114D-429C-9D6A-C469841CEEF5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.WpfClientHost", "VanderStack.WpfClientHost\VanderStack.WpfClientHost.csproj", "{12E92966-966F-4F4F-80EF-7536E95E4318}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.Shared", "VanderStack.Shared\VanderStack.Shared.csproj", "{67DFAFF6-A5D2-49E8-BB11-A82E7791AF9E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VanderStack.WebAssemblyClientHost", "VanderStack.WebAssemblyClientHost\VanderStack.WebAssemblyClientHost.csproj", "{FCE7B479-CE5E-4001-95A4-83F1F6D6D2BC}"
@@ -35,10 +33,6 @@ Global
 		{EE047FDF-114D-429C-9D6A-C469841CEEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE047FDF-114D-429C-9D6A-C469841CEEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE047FDF-114D-429C-9D6A-C469841CEEF5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{12E92966-966F-4F4F-80EF-7536E95E4318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12E92966-966F-4F4F-80EF-7536E95E4318}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12E92966-966F-4F4F-80EF-7536E95E4318}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12E92966-966F-4F4F-80EF-7536E95E4318}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67DFAFF6-A5D2-49E8-BB11-A82E7791AF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{67DFAFF6-A5D2-49E8-BB11-A82E7791AF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67DFAFF6-A5D2-49E8-BB11-A82E7791AF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
