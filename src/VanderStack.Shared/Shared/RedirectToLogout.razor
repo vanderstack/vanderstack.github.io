@@ -1,0 +1,10 @@
+﻿@inject NavigationManager Navigation
+@inject SignOutSessionStateManager SignOutManager
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await SignOutManager.SetSignOutState();
+        Navigation.NavigateTo("authentication/logout");
+    }
+}

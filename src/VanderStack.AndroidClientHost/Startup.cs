@@ -12,6 +12,7 @@
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<HttpClient>();
+            services.AddScoped<IAuthService, AndroidAuthService>();
             services.AddMsalAuthentication();
         }
 

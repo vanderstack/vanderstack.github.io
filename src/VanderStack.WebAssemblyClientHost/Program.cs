@@ -17,6 +17,7 @@ namespace VanderStack.WebAssemblyClientHost
 
             builder.Services.AddMsalAuthentication();
             builder.Services.AddSingleton(new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddSingleton<IAuthService, WebAssemblyAuthService>();
 
             await builder.Build().RunAsync();
         }
