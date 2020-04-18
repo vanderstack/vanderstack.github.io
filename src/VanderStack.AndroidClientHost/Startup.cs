@@ -2,6 +2,7 @@
 {
     // add usings here
     using BlazorWebView;
+    using Microsoft.AspNetCore.Components.Authorization;
     using Microsoft.Extensions.DependencyInjection;
     using System.Net.Http;
     using VanderStack.Shared;
@@ -12,8 +13,9 @@
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<HttpClient>();
-            services.AddScoped<IAuthService, AndroidAuthService>();
             services.AddMsalAuthentication();
+            services.AddScoped<IAuthenticationPlatformSupportService, AndroidAuthenticationPlatformSupportService>();
+            services.AddScoped<AuthenticationStateProvider, AndroidAuthenticationStateProvider>();
         }
 
         /// <summary>

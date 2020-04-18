@@ -61,7 +61,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AndroidAuthService.cs" />
+    <Compile Include="AndroidAuthenticationStateProvider.cs" />
+    <Compile Include="AndroidAuthenticationPlatformSupportService.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

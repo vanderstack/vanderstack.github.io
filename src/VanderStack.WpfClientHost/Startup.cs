@@ -4,6 +4,7 @@ using BlazorWebView;
 using VanderStack.Shared.Infrastructure.Auth;
 using System;
 using VanderStack.Shared;
+using Microsoft.AspNetCore.Components.Authorization;
 
 namespace VanderStack.WpfClientHost
 {
@@ -12,8 +13,9 @@ namespace VanderStack.WpfClientHost
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<HttpClient>();
-            services.AddScoped<IAuthService, WpfAuthService>();
             services.AddMsalAuthentication();
+            services.AddScoped<IAuthenticationPlatformSupportService, WpfAuthenticationPlatformSupportService>();
+            services.AddScoped<AuthenticationStateProvider, WpfAuthenticationStateProvider>();
         }
 
         /// <summary>

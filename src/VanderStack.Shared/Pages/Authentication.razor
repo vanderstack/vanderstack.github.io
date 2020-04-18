@@ -1,9 +1,17 @@
 ﻿@page "/authentication/{action}"
-@inject IAuthService AuthService
+@inject IAuthenticationPlatformSupportService PlatformSupport
 
-@if (AuthService.IsBrowserLoginEnabled)
+@if (PlatformSupport.IsBrowserAuthenticationEnabled)
 {
     <WebAssemblyAuthentication Action="@Action" />
+}
+else if (PlatformSupport.IsNativeAuthenticationEnabled)
+{
+    <NativeAuthentication Action="@Action" />
+}
+else if (PlatformSupport.IsWebServerAuthenticationEnabled)
+{
+    <WebServerAuthentication Action="@Action" />
 }
 else
 {
@@ -11,5 +19,6 @@ else
 }
 
 @code{
-    [Parameter] public string Action { get; set; }
+    [Parameter]
+    public string Action { get; set; }
 }
