@@ -1,0 +1,15 @@
+﻿@page "/authentication/{action}"
+@inject IAuthService AuthService
+
+@if (AuthService.IsBrowserLoginEnabled)
+{
+    <WebAssemblyAuthentication Action="@Action" />
+}
+else
+{
+    <div>Coming Soon...</div>
+}
+
+@code{
+    [Parameter] public string Action { get; set; }
+}

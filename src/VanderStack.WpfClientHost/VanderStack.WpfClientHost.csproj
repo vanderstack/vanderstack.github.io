@@ -1,14 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <PropertyGroup>
     <DocumentationFile></DocumentationFile>
-    <RestoreSources>$(RestoreSources);../../packages;https://api.nuget.org/v3/index.json</RestoreSources>
+    <RestoreSources>$(RestoreSources);../packages;https://api.nuget.org/v3/index.json</RestoreSources>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BlazorWebView.Wpf" Version="0.2.0-preview3" />
+    <PackageReference Include="BlazorWebView.Wpf" Version="0.2.0-preview4" />
   </ItemGroup>
 
   <ItemGroup>
