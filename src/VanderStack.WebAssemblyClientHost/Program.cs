@@ -1,3 +1,5 @@
+using System;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,7 +16,7 @@ namespace VanderStack.WebAssemblyClientHost
             builder.RootComponents.Add<App>("app");
 
             builder.Services.AddMsalAuthentication();
-            builder.Services.AddBaseAddressHttpClient();
+            builder.Services.AddSingleton(new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             await builder.Build().RunAsync();
         }
