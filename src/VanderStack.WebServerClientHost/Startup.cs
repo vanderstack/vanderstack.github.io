@@ -9,6 +9,8 @@ using System;
 using System.Linq;
 using System.Net.Http;
 using VanderStack.Shared.Infrastructure.Auth;
+using Microsoft.AspNetCore.Components.Server;
+using Microsoft.AspNetCore.Components.Authorization;
 
 namespace VanderStack.WebServerClientHost
 {
@@ -21,8 +23,9 @@ namespace VanderStack.WebServerClientHost
             services.AddMvc().AddNewtonsoftJson();
             services.AddServerSideBlazor();
             services.AddScoped<IWeatherForecastService, WeatherForecastService>();
-            services.AddScoped<IAuthService, WebServerAuthService>();
             services.AddMsalAuthentication();
+            services.AddScoped<IAuthenticationPlatformSupportService, WebServerAuthenticationPlatformSupportService>();
+            services.AddScoped<AuthenticationStateProvider, ServerAuthenticationStateProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
