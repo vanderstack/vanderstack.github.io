@@ -1,16 +1,12 @@
 using VanderStack.Shared;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Linq;
-using System.Net.Http;
-using VanderStack.Shared.Infrastructure.Auth;
+using VanderStack.Shared.Infrastructure.Authentication;
 using Microsoft.AspNetCore.Components.Server;
 using Microsoft.AspNetCore.Components.Authorization;
+using VanderStack.Shared.Infrastructure.DependencyInjection;
 
 namespace VanderStack.WebServerClientHost
 {
@@ -20,6 +16,8 @@ namespace VanderStack.WebServerClientHost
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSharedDependencies();
+
             services.AddMvc().AddNewtonsoftJson();
             services.AddServerSideBlazor();
             services.AddScoped<IWeatherForecastService, WeatherForecastService>();

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using VanderStack.Shared;
-using VanderStack.Shared.Infrastructure.Auth;
+using VanderStack.Shared.Infrastructure.Authentication;
 
 namespace VanderStack.WebAssemblyClientHost
 {
