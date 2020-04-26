@@ -21,7 +21,6 @@ namespace VanderStack.WebServerClientHost
             services.AddMvc().AddNewtonsoftJson();
             services.AddServerSideBlazor();
             services.AddScoped<IWeatherForecastService, WeatherForecastService>();
-            services.AddMsalAuthentication();
             services.AddScoped<IAuthenticationPlatformSupportService, WebServerAuthenticationPlatformSupportService>();
             services.AddScoped<AuthenticationStateProvider, ServerAuthenticationStateProvider>();
         }

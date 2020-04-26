@@ -6,7 +6,6 @@
     using Microsoft.Extensions.DependencyInjection;
     using System.Net.Http;
     using VanderStack.Shared;
-    using VanderStack.Shared.Infrastructure.Authentication;
     using VanderStack.Shared.Infrastructure.DependencyInjection;
 
     public class Startup
@@ -16,7 +15,6 @@
             services.AddSharedDependencies();
 
             services.AddScoped<HttpClient>();
-            services.AddMsalAuthentication();
             services.AddScoped<IAuthenticationPlatformSupportService, AndroidAuthenticationPlatformSupportService>();
             services.AddScoped<AuthenticationStateProvider, AndroidAuthenticationStateProvider>();
         }

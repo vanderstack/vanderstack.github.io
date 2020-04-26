@@ -16,20 +16,55 @@
 
 namespace VanderStack.WpfClientHost
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Data;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Threading.Tasks;
+    using Microsoft.Extensions.Logging;
+    using Serilog;
     using System.Windows;
+    using VanderStack.WpfClientHost.Infrastructure.Exceptions;
+    using VanderStack.Shared.Infrastructure.Exceptions;
+    using System.IO;
 
     /// <summary>
     /// Interaction logic for App.xaml.
     /// </summary>
     public partial class App : Application
     {
+        private WpfGlobalExceptionManager _exceptionManager;
+
+        public App()
+        {
+            // Configure Logging for Exceptions which occur outside of Blazor
+            Log.Logger =
+                new LoggerConfiguration()
+                .MinimumLevel.Verbose()
+                .Enrich.WithMachineName()
+                .Enrich.FromLogContext()
+                .WriteTo.Console()
+                .WriteTo.Debug()
+                .WriteTo.File(
+                    Path.Combine(Path.GetTempPath(), $"{nameof(VanderStack)}.log")
+                    , rollingInterval: RollingInterval.Day
+                    , retainedFileCountLimit: 7
+                )
+                .CreateLogger()
+            ;
+
+            var loggerFactory = new LoggerFactory().AddSerilog(Log.Logger);
+
+            _exceptionManager = new WpfGlobalExceptionManager(
+                this
+                , new UnobservedExceptionLoggingHandler(loggerFactory.CreateLogger<IUnobservedExceptionHandler>())
+                , new DispatcherUnhandledExceptionLoggingHandler(loggerFactory.CreateLogger<IDispatcherUnhandledExceptionHandler>())
+                , new AppDomainUnhandledExceptionLoggingHandler(loggerFactory.CreateLogger<IAppDomainUnhandledExceptionHandler>())
+            );
+
+            _exceptionManager.Start();
+        }
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+        }
+
         /// <summary>
         /// Raises the application exit event.
         /// </summary>
@@ -37,6 +72,7 @@ namespace VanderStack.WpfClientHost
         protected override void OnExit(ExitEventArgs e)
         {
             base.OnExit(e);
+            _exceptionManager.Dispose();
             System.Environment.Exit(0);
         }
     }

@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AndroidAuthenticationStateProvider.cs" />
     <Compile Include="AndroidAuthenticationPlatformSupportService.cs" />
+    <Compile Include="Infrastructure\Exceptions\AndroidGlobalExceptionManager.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,6 +112,9 @@
   <ItemGroup>
     <PackageReference Include="BlazorWebView.Android">
       <Version>0.2.0-preview4</Version>
+    </PackageReference>
+    <PackageReference Include="Serilog.Sinks.Xamarin">
+      <Version>0.2.0.64</Version>
     </PackageReference>
     <PackageReference Include="System.Net.Http">
       <Version>4.3.4</Version>

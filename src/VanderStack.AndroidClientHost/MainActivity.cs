@@ -2,7 +2,6 @@
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
-using Android.Widget;
 
 namespace VanderStack.AndroidClientHost
 {
@@ -10,6 +9,11 @@ namespace VanderStack.AndroidClientHost
     using BlazorWebView.Android;
     using BlazorWebView;
     using System;
+    using Serilog;
+    using System.IO;
+    using Microsoft.Extensions.Logging;
+    using VanderStack.AndroidClientHost.Infrastructure.Exceptions;
+    using VanderStack.Shared.Infrastructure.Exceptions;
 
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
@@ -20,6 +24,35 @@ namespace VanderStack.AndroidClientHost
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            // TODO: Log from Android.
+
+            //// Configure Logging for Exceptions which occur outside of Blazor
+            //Log.Logger =
+            //    new LoggerConfiguration()
+            //    .MinimumLevel.Verbose()
+            //    .Enrich.WithMachineName()
+            //    .Enrich.FromLogContext()
+            //    // TODO: verify sinks are valid on android
+            //    //.WriteTo.Console()
+            //    //.WriteTo.Debug()
+            //    //.WriteTo.AndroidLog()
+            //    //.WriteTo.File(
+            //    //    Path.Combine(Path.GetTempPath(), $"{nameof(VanderStack)}.log")
+            //    //    , rollingInterval: RollingInterval.Day
+            //    //    , retainedFileCountLimit: 7
+            //    //)
+            //    .CreateLogger()
+            //;
+
+            //var loggerFactory = new LoggerFactory().AddSerilog(Log.Logger);
+
+            //_exceptionManager = new AndroidGlobalExceptionManager(
+            //    new UnobservedExceptionLoggingHandler(loggerFactory.CreateLogger<IUnobservedExceptionHandler>())
+            //    , new AppDomainUnhandledExceptionLoggingHandler(loggerFactory.CreateLogger<IAppDomainUnhandledExceptionHandler>())
+            //);
+
+            //_exceptionManager.Start();
+
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
@@ -39,6 +72,8 @@ namespace VanderStack.AndroidClientHost
                 this.disposable.Dispose();
                 this.disposable = null;
             }
+
+            //_exceptionManager.Dispose();
             base.OnDestroy();
         }
 

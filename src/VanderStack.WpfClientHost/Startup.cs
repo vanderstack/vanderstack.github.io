@@ -14,7 +14,6 @@ namespace VanderStack.WpfClientHost
         {
             services.AddSharedDependencies();
             services.AddScoped<HttpClient>();
-            services.AddMsalAuthentication();
             services.AddScoped<IAuthenticationPlatformSupportService, WpfAuthenticationPlatformSupportService>();
             services.AddScoped<AuthenticationStateProvider, WpfAuthenticationStateProvider>();
         }
